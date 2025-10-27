@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Академия Художеств | Курсы рисования</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="hero-section">
+        <div class="hero-container">
+            <h1 class="hero-title">Раскройте свой творческий потенциал</h1>
+            <p class="hero-subtitle">Научитесь рисовать с нуля и откройте для себя мир искусства под руководством
+                профессионального художника</p>
+            <div class="hero-buttons">
+                <button class="hero-button" aria-label="Записаться на пробный урок">Записаться на пробный урок</button>
+                <button class="hero-button-outline" aria-label="Узнать больше о курсах">Узнать больше о курсах</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="about-section" aria-label="О преподавателе">
+            <div class="about-container">
+                <h2 class="about-title">О преподавателе</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>Меня зовут Стародумова Ирина, я профессиональный художник и педагог с 10-летним опытом
+                            преподавания.</p>
+                        <p>Мой подход к обучению сочетает классические методики и современные техники. Я верю, что
+                            рисовать может каждый - нужно лишь правильное руководство и практика.</p>
+                        <p>За годы работы я помогла более 500 ученикам раскрыть их творческий потенциал и научиться
+                            выражать себя через искусство.</p>
+                    </div>
+                    <div class="about-image">
+                        <img src="imgs/master.jpg" alt="Стародумова Ирина - преподаватель рисования">
+                    </div>
+                </div>
+                <button class="about-button" aria-label="Посмотреть работы преподавателя">Посмотреть мои работы</button>
+            </div>
+        </section>
+
+        <section class="courses-section" aria-label="Курсы по рисованию">
+            <div class="courses-container">
+                <h2 class="courses-title">Наши курсы</h2>
+                <p class="courses-subtitle">Выберите программу, которая подходит именно вам</p>
+                <ul class="courses-list">
+                    <li class="courses-item">
+                        <h3 class="courses-item-title">Основы рисунка</h3>
+                        <p class="courses-item-text">Идеальный старт для начинающих. Освойте базовые техники, работу с
+                            перспективой и композицией.</p>
+                        <ul class="courses-features">
+                            <li>12 занятий</li>
+                            <li>Материалы включены</li>
+                            <li>Сертификат по окончании</li>
+                        </ul>
+                        <button class="courses-item-button" aria-label="Записаться на курс основ рисунка">Записаться на
+                            курс</button>
+                    </li>
+                    <li class="courses-item">
+                        <h3 class="courses-item-title">Живопись маслом</h3>
+                        <p class="courses-item-text">Научитесь работать с масляными красками, создавать сложные цветовые
+                            решения и фактуры.</p>
+                        <ul class="courses-features">
+                            <li>16 занятий</li>
+                            <li>Профессиональные материалы</li>
+                            <li>Выставка работ</li>
+                        </ul>
+                        <button class="courses-item-button" aria-label="Записаться на курс живописи маслом">Записаться
+                            на курс</button>
+                    </li>
+                    <li class="courses-item">
+                        <h3 class="courses-item-title">Акварельная графика</h3>
+                        <p class="courses-item-text">Освойте легкую и воздушную технику акварели, научитесь создавать
+                            прозрачные слои и эффекты.</p>
+                        <ul class="courses-features">
+                            <li>10 занятий</li>
+                            <li>Авторские методики</li>
+                            <li>Индивидуальный подход</li>
+                        </ul>
+                        <button class="courses-item-button"
+                            aria-label="Записаться на курс акварельной графики">Записаться на курс</button>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="gallery-section" aria-label="Галерея работ">
+            <div class="gallery-container">
+                <h2 class="gallery-title">Галерея работ</h2>
+                <p class="gallery-subtitle">Мои картины в разных техниках и стилях</p>
+
+                <!-- Меню категорий -->
+                <div class="gallery-menu">
+                    <button class="gallery-menu-item active" data-category="all">Все работы</button>
+                    <button class="gallery-menu-item" data-category="landscapes">Пейзажи</button>
+                    <button class="gallery-menu-item" data-category="fantasy">Фэнтези</button>
+                </div>
+
+                <!-- Контейнер для горизонтальной прокрутки -->
+                <div class="gallery-scroll-container">
+                    <div class="gallery-scroll-wrapper">
+                        <div class="gallery-list">
+                            <!-- Морской пейзаж -->
+                            <div class="gallery-item" data-category="landscapes">
+                                <img src="imgs/boat.jpg" alt="Морской пейзаж с лодкой" loading="lazy">
+                                <div class="gallery-item-overlay">
+                                    <h3 class="gallery-item-title">Морское спокойствие</h3>
+                                    <p class="gallery-item-description">Море, лодка, небо. Акварель</p>
+                                </div>
+                            </div>
+
+                            <!-- Кофейный рисунок -->
+                            <div class="gallery-item" data-category="fantasy">
+                                <img src="imgs/cofee.jpg" alt="Дом нарисованный кофе" loading="lazy">
+                                <div class="gallery-item-overlay">
+                                    <h3 class="gallery-item-title">Кофейный домик</h3>
+                                    <p class="gallery-item-description">Рисунок натуральным кофе. Уникальная техника</p>
+                                </div>
+                            </div>
+
+                            <!-- Рожок с цветами -->
+                            <div class="gallery-item" data-category="fantasy">
+                                <img src="imgs/flowers.jpg" alt="Рожок с цветами и надписью мечтай" loading="lazy">
+                                <div class="gallery-item-overlay">
+                                    <h3 class="gallery-item-title">Мечтай</h3>
+                                    <p class="gallery-item-description">Рожок с цветами. Акрил, каллиграфия</p>
+                                </div>
+                            </div>
+
+                            <!-- Девочка с небом -->
+                            <div class="gallery-item" data-category="fantasy">
+                                <img src="imgs/galaxy.jpg" alt="Девочка держит звездное небо" loading="lazy">
+                                <div class="gallery-item-overlay">
+                                    <h3 class="gallery-item-title">Хранительница неба</h3>
+                                    <p class="gallery-item-description">Звездное небо как покрывало. Фэнтези</p>
+                                </div>
+                            </div>
+
+                            <!-- Цветы и зелень -->
+                            <div class="gallery-item" data-category="landscapes">
+                                <img src="imgs/greenflowers.jpg" alt="Цветы и зелень" loading="lazy">
+                                <div class="gallery-item-overlay">
+                                    <h3 class="gallery-item-title">Цветочная гармония</h3>
+                                    <p class="gallery-item-description">Ботаническая иллюстрация. Акварель</p>
+                                </div>
+                            </div>
+
+                            <!-- Холмы и небо -->
+                            <div class="gallery-item" data-category="landscapes">
+                                <img src="imgs/holms.jpg" alt="Холмы и небо" loading="lazy">
+                                <div class="gallery-item-overlay">
+                                    <h3 class="gallery-item-title">Бескрайние холмы</h3>
+                                    <p class="gallery-item-description">Пейзаж с холмами. Масло, холст</p>
+                                </div>
+                            </div>
+
+                            <!-- Лавандовые поля -->
+                            <div class="gallery-item" data-category="landscapes">
+                                <img src="imgs/home.jpg" alt="Лавандовые поля и дом" loading="lazy">
+                                <div class="gallery-item-overlay">
+                                    <h3 class="gallery-item-title">Лавандовые мечты</h3>
+                                    <p class="gallery-item-description">Прованс, лавандовые поля. Акрил</p>
+                                </div>
+                            </div>
+
+                            <!-- Цветки мака -->
+                            <div class="gallery-item" data-category="landscapes">
+                                <img src="imgs/maks.jpg" alt="Цветки мака" loading="lazy">
+                                <div class="gallery-item-overlay">
+                                    <h3 class="gallery-item-title">Алые маки</h3>
+                                    <p class="gallery-item-description">Макропейзаж с маками. Масло</p>
+                                </div>
+                            </div>
+
+                            <!-- Ваза с цветами у окна -->
+                            <div class="gallery-item" data-category="landscapes">
+                                <img src="imgs/peizash.jpg" alt="Ваза с цветами у окна с видом на море" loading="lazy">
+                                <div class="gallery-item-overlay">
+                                    <h3 class="gallery-item-title">Утренний букет</h3>
+                                    <p class="gallery-item-description">Ваза с цветами на фоне моря. Акварель</p>
+                                </div>
+                            </div>
+
+                            <!-- Ветка рябины -->
+                            <div class="gallery-item" data-category="landscapes">
+                                <img src="imgs/ryabina.jpg" alt="Ветка рябины" loading="lazy">
+                                <div class="gallery-item-overlay">
+                                    <h3 class="gallery-item-title">Рябиновая ветвь</h3>
+                                    <p class="gallery-item-description">Ботаническая иллюстрация. Графика, тушь</p>
+                                </div>
+                            </div>
+
+                            <!-- Воздушный шар -->
+                            <div class="gallery-item" data-category="fantasy">
+                                <img src="imgs/shar.jpg" alt="Воздушный шар" loading="lazy">
+                                <div class="gallery-item-overlay">
+                                    <h3 class="gallery-item-title">Полёт мечты</h3>
+                                    <p class="gallery-item-description">Воздушный шар в небе. Акварель</p>
+                                </div>
+                            </div>
+
+                            <!-- Месяц с домом -->
+                            <div class="gallery-item" data-category="fantasy">
+                                <img src="imgs/sky.jpg" alt="Месяц с домом внутри" loading="lazy">
+                                <div class="gallery-item-overlay">
+                                    <h3 class="gallery-item-title">Лунный домик</h3>
+                                    <p class="gallery-item-description">Месяц с домом и воздушным шариком. Символизм</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Кнопки навигации -->
+                    <div class="gallery-nav">
+                        <button class="gallery-nav-button gallery-prev" aria-label="Предыдущие работы">‹</button>
+                        <button class="gallery-nav-button gallery-next" aria-label="Следующие работы">›</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials-section" aria-label="Отзывы о курсах">
+            <div class="testimonials-container">
+                <h2 class="testimonials-title">Отзывы учеников</h2>
+                <p class="testimonials-subtitle">Что говорят наши студенты</p>
+                <ul class="testimonials-list">
+                    <li class="testimonials-item">
+                        <div class="testimonials-avatar">
+                            <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80"
+                                alt="Анастасия">
+                        </div>
+                        <p class="testimonials-item-text">"Никогда не думала, что смогу рисовать! Анна - прекрасный
+                            преподаватель, которая нашла подход именно ко мне. Теперь рисование - моё любимое хобби!"
+                        </p>
+                        <p class="testimonials-item-author">Анастасия, 25 лет</p>
+                        <p class="testimonials-item-course">Курс "Основы рисунка"</p>
+                    </li>
+                    <li class="testimonials-item">
+                        <div class="testimonials-avatar">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80"
+                                alt="Иван">
+                        </div>
+                        <p class="testimonials-item-text">"Преподаватель очень опытный и помогает каждому ученику
+                            индивидуально. Особенно impressed, что смог освоить масляную живопись с нуля."</p>
+                        <p class="testimonials-item-author">Иван, 30 лет</p>
+                        <p class="testimonials-item-course">Курс "Живопись маслом"</p>
+                    </li>
+                    <li class="testimonials-item">
+                        <div class="testimonials-avatar">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80"
+                                alt="Елена">
+                        </div>
+                        <p class="testimonials-item-text">"Курсы по рисованию стали для меня источником вдохновения и
+                            творчества. Теперь вижу мир по-другому - больше цветов, больше деталей!"</p>
+                        <p class="testimonials-item-author">Елена, 28 лет</p>
+                        <p class="testimonials-item-course">Курс "Акварельная графика"</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="contact-section" aria-label="Контакты">
+            <div class="contact-container">
+                <h2 class="contact-title">Запишитесь на курс</h2>
+                <p class="contact-subtitle">Готовы начать своё творческое путешествие?</p>
+
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>Контакты</h3>
+                        <ul class="contact-list">
+                            <li class="contact-item">
+                                <strong>Телефон:</strong>
+                                <a href="tel:+79991234567" class="contact-item-link">+7 (999) 123-45-67</a>
+                            </li>
+                            <li class="contact-item">
+                                <strong>Email:</strong>
+                                <a href="mailto:anna@art-academy.ru" class="contact-item-link">anna@art-academy.ru</a>
+                            </li>
+                            <li class="contact-item">
+                                <strong>Адрес:</strong>
+                                <span>г. Москва, ул. Творческая, 15</span>
+                            </li>
+                            <li class="contact-item">
+                                <strong>Социальные сети:</strong>
+                                <div class="social-links">
+                                    <a href="#" class="social-link" aria-label="Instagram">Instagram</a>
+                                    <a href="#" class="social-link" aria-label="Telegram">Telegram</a>
+                                    <a href="#" class="social-link" aria-label="VK">VK</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <form class="contact-form">
+                        <h3>Форма обратной связи</h3>
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" required>
+                            <label for="name">Ваше имя</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" required>
+                            <label for="email">Ваш email</label>
+                        </div>
+                        <div class="form-group">
+                            <select id="course" name="course">
+                                <option value="">Выберите курс</option>
+                                <option value="basic">Основы рисунка</option>
+                                <option value="oil">Живопись маслом</option>
+                                <option value="watercolor">Акварельная графика</option>
+                            </select>
+                            <label for="course">Интересующий курс</label>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="4"></textarea>
+                            <label for="message">Ваше сообщение</label>
+                        </div>
+                        <button type="submit" class="contact-button">Отправить заявку</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Академия Художеств</h3>
+                    <p>Профессиональное обучение рисованию для взрослых и детей</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#">Политика конфиденциальности</a>
+                    <a href="#">Договор-оферта</a>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; 2024 Академия Художеств. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
