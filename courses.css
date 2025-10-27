@@ -1,0 +1,115 @@
+/* Секция курсов */
+.courses-section {
+  background-color: var(--background-color);
+}
+
+.courses-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.courses-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+}
+
+.courses-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
+  color: var(--light-text);
+}
+
+.courses-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+  list-style: none;
+}
+
+.courses-item {
+  background: var(--white);
+  padding: 40px 30px;
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.courses-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+}
+
+.courses-item:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-hover);
+}
+
+.courses-item-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--secondary-color);
+}
+
+.courses-item-text {
+  margin-bottom: 2rem;
+  color: var(--light-text);
+  line-height: 1.6;
+}
+
+.courses-features {
+  list-style: none;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.courses-features li {
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+  position: relative;
+  padding-left: 25px;
+}
+
+.courses-features li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.courses-item-button {
+  padding: 12px 30px;
+  background-color: var(--primary-color);
+  color: var(--white);
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: var(--transition);
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  width: 100%;
+}
+
+.courses-item-button:hover {
+  background-color: #d1654f;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+/* Адаптивность для секции курсов */
+@media (max-width: 768px) {
+  .courses-list {
+    grid-template-columns: 1fr;
+  }
+}

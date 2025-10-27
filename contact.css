@@ -1,0 +1,191 @@
+/* Секция контактов */
+.contact-section {
+  background: linear-gradient(135deg, var(--secondary-color), #5a7a9a);
+  color: var(--white);
+}
+
+.contact-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.contact-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.contact-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
+  text-align: center;
+  opacity: 0.9;
+}
+
+.contact-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: start;
+}
+
+.contact-info h3 {
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+}
+
+.contact-list {
+  list-style: none;
+}
+
+.contact-item {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.contact-item strong {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+}
+
+.contact-item-link {
+  color: var(--white);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.contact-item-link:hover {
+  color: var(--primary-color);
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.social-link {
+  color: var(--white);
+  text-decoration: none;
+  padding: 8px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  transition: var(--transition);
+  font-size: 0.9rem;
+}
+
+.social-link:hover {
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+/* Блок записи на занятия */
+.contact-action {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 40px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+}
+
+.contact-action h3 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.contact-action p {
+  margin-bottom: 2rem;
+  text-align: center;
+  opacity: 0.9;
+  line-height: 1.6;
+}
+
+.contact-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-action-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 10px;
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: var(--transition);
+  text-align: center;
+}
+
+.contact-action-button.telegram {
+  background: #0088cc;
+  color: white;
+}
+
+.contact-action-button.whatsapp {
+  background: #25d366;
+  color: white;
+}
+
+.contact-action-button.vk {
+  background: #4c75a3;
+  color: white;
+}
+
+.contact-action-button:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
+}
+
+.contact-action-button.telegram:hover {
+  background: #0077b3;
+}
+
+.contact-action-button.whatsapp:hover {
+  background: #20bd5a;
+}
+
+.contact-action-button.vk:hover {
+  background: #3d6187;
+}
+
+/* Адаптивность для контактов */
+@media (max-width: 1024px) {
+  .contact-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-action {
+    padding: 30px 20px;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-action {
+    padding: 25px 15px;
+  }
+
+  .contact-buttons {
+    gap: 10px;
+  }
+
+  .contact-action-button {
+    padding: 12px 15px;
+    font-size: 0.9rem;
+  }
+}

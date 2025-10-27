@@ -22,16 +22,30 @@ document.addEventListener('DOMContentLoaded', function () {
       }, 150);
 
       // Обработка конкретных кнопок
-      if (this.classList.contains('hero-button') || this.classList.contains('contact-button')) {
+      if (this.classList.contains('hero-button')) {
+        smoothScroll('.contact-section');
+      }
+
+      if (this.classList.contains('hero-button-outline')) {
         smoothScroll('.contact-section');
       }
 
       if (this.classList.contains('about-button')) {
         smoothScroll('.gallery-section');
       }
+    });
+  });
 
-      if (this.classList.contains('courses-item-button')) {
-        smoothScroll('.contact-section');
+  // Обработчики для кнопок в блоке контактов
+  const contactButtons = document.querySelectorAll('.contact-action-button');
+  contactButtons.forEach((button) => {
+    button.addEventListener('click', function (e) {
+      // Здесь можно добавить логику для открытия соответствующих мессенджеров
+      // Пока просто предотвращаем переход по ссылке если href="#"
+      if (this.getAttribute('href') === '#') {
+        e.preventDefault();
+        // Можно добавить уведомление или другую логику
+        console.log('Открытие мессенджера: ' + this.classList[1]);
       }
     });
   });
@@ -193,120 +207,6 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     }, 350);
   }
-
-  // Обработка формы обратной связи
-  const contactForm = document.querySelector('.contact-form');
-  if (contactForm) {
-    contactForm.addEventListener('submit', function (e) {
-      e.preventDefault();
-
-      // Собираем данные формы
-      const formData = new FormData(this);
-      const data = Object.fromEntries(formData);
-
-      // Валидация
-      if (!data.name || !data.email) {
-        showNotification('Пожалуйста, заполните обязательные поля', 'error');
-        return;
-      }
-
-      // Имитация отправки
-      showNotification(
-        'Спасибо! Ваша заявка отправлена. Мы свяжемся с вами в ближайшее время.',
-        'success',
-      );
-
-      // Очищаем форму
-      this.reset();
-
-      // Сбрасываем плейсхолдеры
-      const labels = this.querySelectorAll('label');
-      labels.forEach((label) => {
-        label.style.top = '15px';
-        label.style.left = '15px';
-        label.style.fontSize = '1rem';
-        label.style.background = 'transparent';
-      });
-    });
-  }
-
-  // Функция показа уведомлений
-  function showNotification(message, type = 'info') {
-    const notification = document.createElement('div');
-    notification.className = `notification notification-${type}`;
-    notification.innerHTML = `
-            <span>${message}</span>
-            <button class="notification-close">&times;</button>
-        `;
-
-    // Стили для уведомления
-    notification.style.cssText = `
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            background: ${
-              type === 'error' ? '#f44336' : type === 'success' ? '#4CAF50' : '#2196F3'
-            };
-            color: white;
-            padding: 15px 20px;
-            border-radius: 5px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            z-index: 1000;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            max-width: 400px;
-            animation: slideIn 0.3s ease;
-        `;
-
-    document.body.appendChild(notification);
-
-    // Кнопка закрытия
-    const closeBtn = notification.querySelector('.notification-close');
-    closeBtn.addEventListener('click', () => {
-      notification.style.animation = 'slideOut 0.3s ease';
-      setTimeout(() => {
-        notification.remove();
-      }, 300);
-    });
-
-    // Автоматическое закрытие
-    setTimeout(() => {
-      if (notification.parentNode) {
-        notification.style.animation = 'slideOut 0.3s ease';
-        setTimeout(() => {
-          notification.remove();
-        }, 300);
-      }
-    }, 5000);
-  }
-
-  // Анимация для уведомлений
-  const style = document.createElement('style');
-  style.textContent = `
-        @keyframes slideIn {
-            from { transform: translateX(100%); opacity: 0; }
-            to { transform: translateX(0); opacity: 1; }
-        }
-        @keyframes slideOut {
-            from { transform: translateX(0); opacity: 1; }
-            to { transform: translateX(100%); opacity: 0; }
-        }
-        .notification-close {
-            background: none;
-            border: none;
-            color: white;
-            font-size: 1.2rem;
-            cursor: pointer;
-            padding: 0;
-            width: 20px;
-            height: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-    `;
-  document.head.appendChild(style);
 
   // Анимация появления элементов при скролле
   const observerOptions = {

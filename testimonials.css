@@ -1,0 +1,90 @@
+/* Секция отзывов */
+.testimonials-section {
+  background-color: var(--background-color);
+}
+
+.testimonials-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.testimonials-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+}
+
+.testimonials-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
+  color: var(--light-text);
+}
+
+.testimonials-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+  list-style: none;
+}
+
+.testimonials-item {
+  background: var(--white);
+  padding: 40px 30px;
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  text-align: center;
+  position: relative;
+}
+
+.testimonials-item::before {
+  content: '"';
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  font-size: 4rem;
+  color: var(--secondary-color);
+  opacity: 0.3;
+  font-family: 'Playfair Display', serif;
+}
+
+.testimonials-item:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+}
+
+.testimonials-item-text {
+  font-style: italic;
+  margin-bottom: 1.5rem;
+  color: var(--light-text);
+  line-height: 1.6;
+  font-size: 1.1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.testimonials-item-author {
+  font-weight: 600;
+  color: var(--secondary-color);
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+/* Адаптивность для отзывов */
+@media (max-width: 768px) {
+  .testimonials-list {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonials-item {
+    padding: 30px 20px;
+  }
+
+  .testimonials-item::before {
+    left: 20px;
+    top: 15px;
+    font-size: 3rem;
+  }
+}
